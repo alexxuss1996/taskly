@@ -68,9 +68,9 @@ const patch = <T>(url: string, body: unknown) =>
     body: JSON.stringify(body),
   });
 
-const del = <T>(url: string) =>
+const remove = <T>(url: string) =>
   request<T>(url, {
     method: "DELETE",
   });
 
-export { get, post, put, patch, del, ApiError };
+export { get, post, put, patch, remove, ApiError };
